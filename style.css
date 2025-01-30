@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
   background-color: cadetblue;
 }
 
@@ -29,12 +30,28 @@ h4 {
   font-weight: 300;
 }
 
-img {
+picture {
   display: block;
+  max-width: 100%;
+}
+/* Hidden the square pictures when screen size under 960px */
+.landscape{
+  display: block;
+}
+.square{
+  display: none;
 }
 
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Hidden the landscape pictures when screen size above 960px */
+  .square {
+    display: block;
+  }
+  .landscape{
+    display: none;
+  }
+  
 }
