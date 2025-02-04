@@ -8,8 +8,7 @@ body {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: block;
   align-items: center;
   justify-items: center;
   background-color: cadetblue;
@@ -44,6 +43,7 @@ picture {
 
 @media (min-width: 960px) {
   .header {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   /* Hidden the landscape pictures when screen size above 960px */
